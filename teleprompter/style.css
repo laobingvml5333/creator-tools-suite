@@ -1,0 +1,144 @@
+/* ========================================
+   CUSTOM STYLES FOR TELEPROMPTER PRO
+   ======================================== */
+
+/* Mirror/Flip Utility Class */
+.mirror-x {
+    transform: scaleX(-1);
+    transition: transform 0.3s ease;
+}
+
+/* Hide Scrollbars for Clean Look */
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Smooth Scrolling */
+#promptDisplay {
+    scroll-behavior: smooth;
+}
+
+/* Custom Focus Styles */
+textarea:focus,
+input:focus,
+button:focus {
+    outline: none;
+}
+
+/* Slider Customization */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    border-radius: 3px;
+    background: #4B5563;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #3B82F6;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #2563EB;
+    transform: scale(1.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #3B82F6;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background: #2563EB;
+    transform: scale(1.2);
+}
+
+/* Button Hover Effects Enhancement */
+button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Prompt Text Selection Disable (for cleaner look during scrolling) */
+#promptText {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Fade-in Animation for Prompt Mode */
+#promptMode {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Control Bar Slide-up Animation */
+#controlBar {
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Text Area */
+#scriptInput {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Prompt Display Padding for Better Readability */
+#promptDisplay {
+    padding-top: 25vh;
+    padding-bottom: 75vh;
+}
+
+/* Active Button State */
+.bg-purple-700 {
+    background-color: #7C3AED !important;
+}
+
+/* Ensure full height for prompt mode */
+#promptMode {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#promptDisplay {
+    height: 100%;
+    overflow-y: auto;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Utilities - Simple, private, and fast tools for content creators.">
+    <title>My Web Tools - Free Online Utilities</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg border-b border-gray-700">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-layer-group text-purple-500 text-2xl"></i>
+                <h1
+                    class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
+                    My Web Tools
+                </h1>
+            </div>
+            <nav>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors text-sm">
+                    <i class="fab fa-github mr-1"></i> GitHub
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-4 text-center">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Free Online Utilities
+            </h2>
+            <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+                Simple, private, and fast tools for creators.<br>
+                No installation required. No data collection.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tools Grid -->
+    <main class="flex-grow container mx-auto px-4 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+            <!-- Card 1: Teleprompter Pro -->
+            <div
+                class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
+                <div class="flex items-center justify-between mb-4">
+                    <div
+                        class="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-scroll text-2xl"></i>
+                    </div>
+                    <span class="bg-green-900/50 text-green-400 text-xs px-2 py-1 rounded-full border border-green-700">
+                        Free
+                    </span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-white group-hover:text-blue-400 transition-colors">
+                    Teleprompter Pro
+                </h3>
+                <p class="text-gray-400 text-sm mb-6 h-10">
+                    Browser-based autocue with mirroring, speed control, and voice-ready features.
+                </p>
+                <a href="./teleprompter/index.html"
+                    class="block w-full bg-gray-700 hover:bg-blue-600 text-white text-center py-3 rounded-lg transition-all duration-300 font-medium">
+                    Open Tool <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Card 2: Placeholder -->
+            <div
+                class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 border-dashed flex flex-col items-center justify-center text-center h-full min-h-[240px]">
+                <div class="w-12 h-12 bg-gray-700/50 rounded-full flex items-center justify-center text-gray-500 mb-4">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-400 mb-2">
+                    More Tools Coming Soon
+                </h3>
+                <p class="text-gray-500 text-sm">
+                    Stay tuned for new utilities.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2024 My Web Tools. All rights reserved.</p>
+            <p class="mt-2">
+                Built with <i class="fas fa-code text-blue-500 mx-1"></i> and <i
+                    class="fas fa-heart text-red-500 mx-1"></i>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

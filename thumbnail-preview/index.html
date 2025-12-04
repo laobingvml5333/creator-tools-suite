@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Thumbnail Suite - Preview & Compress Tool</title>
+    <link rel="canonical" href="https://tools-site-3a6.pages.dev/thumbnail-preview/">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-477VRK42E1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-477VRK42E1');
+    </script>
+    <meta name="description"
+        content="Free YouTube Thumbnail Suite: Preview your thumbnails across Desktop, Mobile, and Shorts formats. Compress images under 2MB with smart quality. Perfect for content creators.">
+    <meta name="keywords"
+        content="YouTube thumbnail preview, thumbnail compressor, YouTube Shorts thumbnail, thumbnail optimizer, content creator tools">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "YouTube Thumbnail Suite",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Linear Theme -->
+    <link rel="stylesheet" href="../theme.css">
+</head>
+
+<body class="bg-black text-gray-300 font-sans min-h-screen">
+
+    <!-- ========================================
+         HEADER (App Drawer Navigation)
+    ========================================= -->
+    <header class="header sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo / Home Link -->
+                <!-- Home Button -->
+                <a href="../index.html" class="btn btn-secondary">
+                    <i class="fas fa-home mr-2"></i>
+                    <span class="hidden sm:inline">Home</span>
+                </a>
+
+                <!-- App Drawer (More Tools) -->
+                <div class="relative group">
+                    <button
+                        class="flex items-center space-x-2 bg-[#222] text-white border border-white/10 px-4 py-2 rounded-lg hover:bg-[#333] transition-all">
+                        <i class="fas fa-th text-white"></i>
+                        <span class="hidden sm:inline font-medium">More Tools</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div
+                        class="dropdown-menu absolute right-0 mt-2 w-64 bg-[#111] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-2">
+                            <a href="../teleprompter/index.html"
+                                class="block px-4 py-3 hover:bg-[#222] transition-colors">
+                                <i class="fas fa-scroll text-white mr-3 w-5"></i>Teleprompter
+                            </a>
+                            <a href="../youtube-tags/index.html"
+                                class="block px-4 py-3 hover:bg-[#222] transition-colors">
+                                <i class="fas fa-tags text-white mr-3 w-5"></i>Tag Genius
+                            </a>
+                            <a href="../script-timer/index.html"
+                                class="block px-4 py-3 hover:bg-[#222] transition-colors">
+                                <i class="fas fa-stopwatch text-white mr-3 w-5"></i>Script Timer
+                            </a>
+                            <a href="../thumbnail-preview/index.html"
+                                class="block px-4 py-3 hover:bg-[#222] transition-colors">
+                                <i class="fas fa-image text-white mr-3 w-5"></i>Thumbnail Suite
+                            </a>
+                            <a href="../youtube-money-calculator/index.html"
+                                class="block px-4 py-3 hover:bg-[#222] transition-colors">
+                                <i class="fas fa-dollar-sign text-white mr-3 w-5"></i>Money Calculator
+                            </a>
+                            <a href="../video-idea-generator/index.html"
+                                class="block px-4 py-3 hover:bg-[#222] transition-colors">
+                                <i class="fas fa-lightbulb text-white mr-3 w-5"></i>Idea Generator
+                            </a>
+                            <div class="border-t border-white/10 my-1"></div>
+                            <a href="../index.html"
+                                class="block px-4 py-3 hover:bg-[#222] transition-colors text-sm text-gray-400">
+                                View All Tools
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Hero Section -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 glow-text text-white">
+                YouTube Thumbnail Suite
+            </h2>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                Preview your thumbnails across all YouTube formats. Compress images to meet YouTube's 2MB limit with
+                smart quality.
+            </p>
+        </div>
+
+        <!-- ========================================
+             CONTROLS SECTION
+        ========================================= -->
+        <div class="max-w-4xl mx-auto mb-8">
+            <div class="bg-[#111] border border-white/10 rounded-xl p-6 md:p-8 shadow-2xl">
+
+                <!-- Format Toggle -->
+                <div class="mb-6">
+                    <label class="block text-sm font-semibold text-gray-300 mb-3">
+                        <i class="fas fa-toggle-on mr-2 text-white"></i>
+                        Video Format
+                    </label>
+                    <div class="flex space-x-3">
+                        <button id="btn-long"
+                            class="px-6 py-2 rounded-lg font-bold transition-all duration-200 bg-white text-black hover:bg-gray-200 border border-transparent">
+                            <i class="fas fa-desktop mr-2"></i>Long Video (16:9)
+                        </button>
+                        <button id="btn-shorts"
+                            class="px-6 py-2 rounded-lg font-medium transition-all duration-200 bg-[#222] text-gray-300 border border-white/10 hover:bg-[#333] hover:text-white hover:border-white/30">
+                            <i class="fas fa-mobile-alt mr-2"></i>Shorts (9:16)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- File Upload -->
+                <div class="mb-6">
+                    <label class="block text-sm font-semibold text-gray-300 mb-3">
+                        <i class="fas fa-upload mr-2 text-white"></i>
+                        Upload Thumbnail
+                    </label>
+                    <input type="file" id="input-file" accept="image/*"
+                        class="block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-6 file:rounded-lg file:border-0 file:text-sm file:font-bold file:bg-white file:text-black hover:file:bg-gray-200 file:transition-all cursor-pointer bg-black rounded-lg border border-white/20 p-1">
+                    <p id="hint-ratio" class="text-xs text-gray-500 mt-2">Recommended: 1280x720px (16:9 ratio)</p>
+                </div>
+
+                <!-- Title Input -->
+                <div class="mb-6">
+                    <label class="block text-sm font-semibold text-gray-300 mb-3">
+                        <i class="fas fa-heading mr-2 text-white"></i>
+                        Video Title
+                    </label>
+                    <input type="text" id="input-title" placeholder="Enter your video title..."
+                        class="w-full bg-black border border-white/20 text-white px-4 py-3 rounded-lg focus:border-white focus:ring-0 transition-colors">
+                </div>
+
+                <!-- Timestamp Toggle (Long Video Only) -->
+                <div id="control-timestamp" class="mb-6">
+                    <div class="flex items-center justify-between">
+                        <label class="text-sm font-semibold text-gray-300">
+                            <i class="fas fa-clock mr-2 text-white"></i>
+                            Show Timestamp Overlay
+                        </label>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="toggle-timestamp" checked class="sr-only peer">
+                            <div
+                                class="w-11 h-6 bg-gray-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-white/20">
+                            </div>
+                        </label>
+                    </div>
+                    <span class="text-xs text-gray-500">Check if text is covered by timestamp</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ========================================
+             COMPRESSION ALERT (Hidden by default)
+        ========================================= -->
+        <div id="alert-compression" class="max-w-4xl mx-auto mb-8 hidden">
+            <div class="bg-[#111] border border-white/20 rounded-xl p-6">
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-exclamation-triangle text-white text-3xl mt-1"></i>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-white mb-2">Image Too Large!</h3>
+                        <p class="text-gray-300 mb-4">
+                            Your image is <strong id="size-original" class="text-white">0 MB</strong>.
+                            YouTube's limit is <strong class="text-white">2 MB</strong>.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <button id="btn-compress"
+                                class="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition-all flex items-center shadow-lg">
+                                <i class="fas fa-compress-alt mr-2"></i>
+                                Compress Now (Smart Quality)
+                            </button>
+                            <button id="btn-download"
+                                class="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition-all flex items-center shadow-lg hidden">
+                                <i class="fas fa-download mr-2"></i>
+                                Download Compressed (<span id="size-compressed">0 MB</span>)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================
+             PREVIEW WRAPPER (Hidden until upload)
+        ========================================= -->
+        <div id="preview-wrapper" class="hidden">
+
+            <!-- LONG VIDEO VIEW -->
+            <div id="view-long" class="space-y-12">
+
+                <!-- Desktop Preview -->
+                <div class="card p-6 md:p-8">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-desktop text-white mr-3"></i>
+                        Homepage View (Desktop)
+                    </h3>
+                    <div class="bg-gray-900 rounded-lg p-6">
+                        <div class="max-w-md mx-auto">
+                            <div class="relative mb-3 bg-gray-800 rounded-lg overflow-hidden aspect-video">
+                                <img id="img-desktop" src="" alt="Preview" class="w-full h-full object-cover">
+                                <div id="ts-desktop"
+                                    class="absolute bottom-2 right-2 bg-black/90 text-white text-xs font-bold px-2 py-1 rounded">
+                                    10:24
+                                </div>
+                            </div>
+                            <h4 id="title-desktop" class="text-sm font-semibold text-white line-clamp-2 mb-2">
+                                Your Video Title Will Appear Here
+                            </h4>
+                            <div class="flex items-center text-xs text-gray-400">
+                                <div class="w-9 h-9 bg-gray-700 rounded-full mr-3 flex items-center justify-center">
+                                    <i class="fas fa-user text-gray-500"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Your Channel</p>
+                                    <p>1.2M views • 2 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Preview -->
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-6 md:p-8 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-sidebar text-white mr-3"></i>
+                        Sidebar View (Suggested Videos)
+                    </h3>
+                    <div class="bg-gray-900 rounded-lg p-6">
+                        <div class="max-w-sm mx-auto">
+                            <div class="flex gap-2">
+                                <div
+                                    class="relative w-40 flex-shrink-0 bg-gray-800 rounded overflow-hidden aspect-video">
+                                    <img id="img-sidebar" src="" alt="Preview" class="w-full h-full object-cover">
+                                    <div id="ts-sidebar"
+                                        class="absolute bottom-1 right-1 bg-black/90 text-white text-xs font-bold px-1.5 py-0.5 rounded">
+                                        10:24
+                                    </div>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 id="title-sidebar" class="text-xs font-semibold text-white line-clamp-2 mb-1">
+                                        Your Video Title Will Appear Here
+                                    </h4>
+                                    <p class="text-xs text-gray-400">Your Channel</p>
+                                    <p class="text-xs text-gray-500">1.2M views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Preview -->
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-6 md:p-8 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-mobile-alt text-white mr-3"></i>
+                        Mobile View (YouTube App)
+                    </h3>
+                    <div class="bg-gray-900 rounded-lg p-6">
+                        <div class="max-w-sm mx-auto">
+                            <div class="relative mb-3 bg-gray-800 rounded overflow-hidden aspect-video">
+                                <img id="img-mobile" src="" alt="Preview" class="w-full h-full object-cover">
+                                <div id="ts-mobile"
+                                    class="absolute bottom-1 right-1 bg-black/90 text-white text-xs font-bold px-1.5 py-0.5 rounded">
+                                    10:24
+                                </div>
+                            </div>
+                            <h4 id="title-mobile" class="text-sm font-semibold text-white line-clamp-2 mb-2">
+                                Your Video Title Will Appear Here
+                            </h4>
+                            <div class="flex items-center text-xs text-gray-400">
+                                <div class="w-8 h-8 bg-gray-700 rounded-full mr-2 flex items-center justify-center">
+                                    <i class="fas fa-user text-gray-500"></i>
+                                </div>
+                                <p>Your Channel • 1.2M views • 2 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SHORTS VIEW -->
+            <div id="view-shorts" class="space-y-12 hidden">
+
+                <!-- Shorts Feed Preview -->
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-6 md:p-8 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-mobile-alt text-white mr-3"></i>
+                        Shorts Feed View
+                    </h3>
+                    <div class="bg-gray-900 rounded-lg p-6 flex justify-center">
+                        <div
+                            class="relative w-[300px] h-[533px] bg-black rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-800">
+                            <img id="img-feed" src="" alt="Shorts Preview" class="w-full h-full object-cover">
+
+                            <!-- UI Overlay -->
+                            <div
+                                class="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/20 via-transparent to-black/60">
+                                <!-- Right Buttons -->
+                                <div class="absolute right-4 bottom-20 flex flex-col items-center space-y-6">
+                                    <div class="flex flex-col items-center">
+                                        <div
+                                            class="w-10 h-10 bg-gray-200/20 rounded-full flex items-center justify-center mb-1">
+                                            <i class="fas fa-thumbs-up text-white"></i>
+                                        </div>
+                                        <span class="text-white text-xs font-bold">Like</span>
+                                    </div>
+                                    <div class="flex flex-col items-center">
+                                        <div
+                                            class="w-10 h-10 bg-gray-200/20 rounded-full flex items-center justify-center mb-1">
+                                            <i class="fas fa-thumbs-down text-white"></i>
+                                        </div>
+                                        <span class="text-white text-xs font-bold">Dislike</span>
+                                    </div>
+                                    <div class="flex flex-col items-center">
+                                        <div
+                                            class="w-10 h-10 bg-gray-200/20 rounded-full flex items-center justify-center mb-1">
+                                            <i class="fas fa-comment-alt text-white"></i>
+                                        </div>
+                                        <span class="text-white text-xs font-bold">1.2K</span>
+                                    </div>
+                                    <div class="flex flex-col items-center">
+                                        <div
+                                            class="w-10 h-10 bg-gray-200/20 rounded-full flex items-center justify-center mb-1">
+                                            <i class="fas fa-share text-white"></i>
+                                        </div>
+                                        <span class="text-white text-xs font-bold">Share</span>
+                                    </div>
+                                </div>
+
+                                <!-- Bottom Info -->
+                                <div class="absolute left-4 bottom-6 right-16">
+                                    <div class="flex items-center mb-3">
+                                        <div class="w-8 h-8 bg-gray-500 rounded-full mr-2"></div>
+                                        <span class="text-white font-bold text-sm">@YourChannel</span>
+                                        <button
+                                            class="ml-2 bg-white text-black text-xs font-bold px-3 py-1 rounded-full">Subscribe</button>
+                                    </div>
+                                    <p id="title-feed" class="text-white text-sm font-medium line-clamp-2 leading-snug">
+                                        Your Shorts Title Will Appear Here
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shorts Grid Preview -->
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-6 md:p-8 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-th text-white mr-3"></i>
+                        Channel Grid View
+                    </h3>
+                    <div class="bg-gray-900 rounded-lg p-6">
+                        <div class="grid grid-cols-3 gap-4 max-w-md mx-auto">
+
+                            <!-- Slot 1: User's Video -->
+                            <div class="text-center">
+                                <div class="relative aspect-[9/16] bg-gray-800 rounded-lg overflow-hidden">
+                                    <img id="img-grid-1" src="" alt="Grid" class="w-full h-full object-cover">
+                                    <div class="absolute bottom-1 right-1 text-white text-xs font-bold drop-shadow-md">
+                                        1.2M views
+                                    </div>
+                                    <h4 id="title-grid"
+                                        class="absolute bottom-6 left-2 right-2 text-white text-xs font-bold line-clamp-2 drop-shadow-md">
+                                        Your Title
+                                    </h4>
+                                </div>
+                                <p class="text-white font-bold mt-1 text-sm">YOUR VIDEO</p>
+                            </div>
+
+                            <!-- Slot 2: Simulated Video -->
+                            <div class="text-center">
+                                <div class="relative aspect-[9/16] bg-gray-800 rounded-lg overflow-hidden">
+                                    <img src="https://picsum.photos/270/480?random=2" alt="Simulated"
+                                        class="w-full h-full object-cover opacity-60">
+                                    <span
+                                        class="absolute top-2 right-2 bg-black/70 text-xs px-2 py-0.5 rounded text-gray-300">Simulated</span>
+                                    <div class="absolute bottom-1 right-1 text-white text-xs font-bold drop-shadow-md">
+                                        856K views
+                                    </div>
+                                </div>
+                                <p class="text-gray-500 mt-1 text-xs italic">Competitor's Video</p>
+                            </div>
+
+                            <!-- Slot 3: Simulated Video -->
+                            <div class="text-center">
+                                <div class="relative aspect-[9/16] bg-gray-800 rounded-lg overflow-hidden">
+                                    <img src="https://picsum.photos/270/480?random=3" alt="Simulated"
+                                        class="w-full h-full object-cover opacity-60">
+                                    <span
+                                        class="absolute top-2 right-2 bg-black/70 text-xs px-2 py-0.5 rounded text-gray-300">Simulated</span>
+                                    <div class="absolute bottom-1 right-1 text-white text-xs font-bold drop-shadow-md">
+                                        623K views
+                                    </div>
+                                </div>
+                                <p class="text-gray-500 mt-1 text-xs italic">Competitor's Video</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ========================================
+         SEO CONTENT
+    ========================================= -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-16 border-t border-subtle">
+        <div class="prose prose-invert max-w-none">
+            <h2 class="text-2xl font-bold mb-4">Why Use YouTube Thumbnail Suite?</h2>
+            <p class="text-gray-400 mb-4">
+                Creating the perfect YouTube thumbnail is crucial for video success. Our Thumbnail Suite lets you
+                preview how your thumbnail will appear across all YouTube platforms - from desktop homepage to mobile
+                app to YouTube Shorts feed. Plus, our smart compression ensures your images meet YouTube's 2MB limit
+                without sacrificing quality.
+            </p>
+            <h3 class="text-xl font-bold mb-3">Key Features</h3>
+            <ul class="text-gray-400 space-y-2">
+                <li><strong>Multi-Format Preview:</strong> See your thumbnail in Desktop, Sidebar, Mobile, and Shorts
+                    views</li>
+                <li><strong>Smart Compression:</strong> Automatically compress images to under 2MB with minimal quality
+                    loss</li>
+                <li><strong>Aspect Ratio Warnings:</strong> Get alerts if your image doesn't match the recommended ratio
+                </li>
+                <li><strong>Real-Time Title Preview:</strong> See how your title looks alongside the thumbnail</li>
+                <li><strong>100% Client-Side:</strong> Your images never leave your device - complete privacy</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Golden Footer -->
+    <footer class="border-t border-subtle py-8 mt-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 text-sm mb-3">
+                &copy; 2025 Creator Tools. All rights reserved.
+            </p>
+            <nav class="flex justify-center items-center space-x-4 text-sm text-gray-500 mb-4">
+                <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+                <span>•</span>
+                <a href="../privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <span>•</span>
+                <a href="../terms.html" class="hover:text-white transition-colors">Terms</a>
+            </nav>
+            <p class="text-xs text-gray-600 italic">
+                Free Online Tools for YouTubers, Vloggers & Content Creators.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>

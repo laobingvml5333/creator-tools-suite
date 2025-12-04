@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free Online Utilities - Simple, private, and fast tools for content creators.">
     <title>My Web Tools - Free Online Utilities</title>
+    <link rel="canonical" href="https://tools-site-3a6.pages.dev/">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-477VRK42E1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-477VRK42E1');
+    </script>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,22 +25,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Linear Theme -->
+    <link rel="stylesheet" href="theme.css">
 </head>
 
-<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+<body class="bg-black text-white min-h-screen flex flex-col">
 
     <!-- Header -->
-    <header class="bg-gray-800 shadow-lg border-b border-gray-700">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <header class="header sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <i class="fas fa-layer-group text-purple-500 text-2xl"></i>
-                <h1
-                    class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
+                <i class="fas fa-layer-group text-white text-2xl"></i>
+                <h1 class="text-xl font-semibold glow-text">
                     My Web Tools
                 </h1>
             </div>
             <nav>
-                <a href="#" class="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="https://github.com/laobing850915/tools-site" target="_blank" class="nav-link text-sm">
                     <i class="fab fa-github mr-1"></i> GitHub
                 </a>
             </nav>
@@ -37,70 +50,267 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="py-20 px-4 text-center">
-        <div class="container mx-auto max-w-3xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+    <section class="py-24 px-6 text-center fade-in">
+        <div class="container mx-auto max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight glow-text">
                 Free Online Utilities
-            </h2>
-            <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light">
                 Simple, private, and fast tools for creators.<br>
-                No installation required. No data collection.
+                <span class="text-gray-500">No installation required. No data collection.</span>
             </p>
         </div>
     </section>
 
     <!-- Tools Grid -->
-    <main class="flex-grow container mx-auto px-4 pb-20">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <main class="flex-grow container mx-auto px-6 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
 
             <!-- Card 1: Teleprompter Pro -->
-            <div
-                class="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
-                <div class="flex items-center justify-between mb-4">
-                    <div
-                        class="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                        <i class="fas fa-scroll text-2xl"></i>
+            <a href="./teleprompter/index.html"
+                class="group block bg-[#111] border border-white/10 rounded-xl p-6 hover:border-white hover:-translate-y-1 transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="tool-card-icon">
+                        <i class="fas fa-scroll text-white text-xl"></i>
                     </div>
-                    <span class="bg-green-900/50 text-green-400 text-xs px-2 py-1 rounded-full border border-green-700">
+                    <span class="text-xs text-tertiary border border-subtle px-2 py-1 rounded-md">
                         Free
                     </span>
                 </div>
-                <h3 class="text-xl font-bold mb-2 text-white group-hover:text-blue-400 transition-colors">
+                <h3 class="tool-card-title">
                     Teleprompter Pro
                 </h3>
-                <p class="text-gray-400 text-sm mb-6 h-10">
-                    Browser-based autocue with mirroring, speed control, and voice-ready features.
+                <p class="tool-card-description">
+                    Browser-based autocue with mirroring, speed control, and voice-ready features for professional
+                    content creation.
                 </p>
-                <a href="./teleprompter/index.html"
-                    class="block w-full bg-gray-700 hover:bg-blue-600 text-white text-center py-3 rounded-lg transition-all duration-300 font-medium">
-                    Open Tool <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                </a>
-            </div>
-
-            <!-- Card 2: Placeholder -->
-            <div
-                class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 border-dashed flex flex-col items-center justify-center text-center h-full min-h-[240px]">
-                <div class="w-12 h-12 bg-gray-700/50 rounded-full flex items-center justify-center text-gray-500 mb-4">
-                    <i class="fas fa-plus"></i>
+                <div class="mt-6 flex items-center text-white font-bold group-hover:text-gray-300 transition-colors">
+                    Open Tool <i class="fas fa-arrow-right ml-2 text-sm"></i>
                 </div>
-                <h3 class="text-lg font-semibold text-gray-400 mb-2">
-                    More Tools Coming Soon
+            </a>
+
+            <!-- Card 2: YouTube Tag Genius -->
+            <a href="./youtube-tags/index.html" target="_blank"
+                class="group block bg-[#111] border border-white/10 rounded-xl p-6 hover:border-white hover:-translate-y-1 transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="tool-card-icon">
+                        <i class="fas fa-tags text-white text-xl"></i>
+                    </div>
+                    <span class="text-xs text-tertiary border border-subtle px-2 py-1 rounded-md">
+                        Free
+                    </span>
+                </div>
+                <h3 class="tool-card-title">
+                    YouTube Tag Genius
                 </h3>
-                <p class="text-gray-500 text-sm">
-                    Stay tuned for new utilities.
+                <p class="tool-card-description">
+                    AI-powered keyword generator with static fallback. Boost your video SEO instantly with smart tag
+                    suggestions.
                 </p>
-            </div>
+                <div class="mt-6 flex items-center text-white font-bold group-hover:text-gray-300 transition-colors">
+                    Open Tool <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </div>
+            </a>
+
+            <!-- Card 3: Script Timer -->
+            <a href="./script-timer/index.html" target="_blank"
+                class="group block bg-[#111] border border-white/10 rounded-xl p-6 hover:border-white hover:-translate-y-1 transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="tool-card-icon">
+                        <i class="fas fa-stopwatch text-white text-xl"></i>
+                    </div>
+                    <span class="text-xs text-tertiary border border-subtle px-2 py-1 rounded-md">
+                        Free
+                    </span>
+                </div>
+                <h3 class="tool-card-title">
+                    Script Timer
+                </h3>
+                <p class="tool-card-description">
+                    Calculate reading time for your scripts with precision. Perfect for YouTube videos, podcasts, and
+                    presentations.
+                </p>
+                <div class="mt-6 flex items-center text-white font-bold group-hover:text-gray-300 transition-colors">
+                    Open Tool <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </div>
+            </a>
+
+            <!-- Card 4: Thumbnail Suite -->
+            <a href="./thumbnail-preview/index.html" target="_blank"
+                class="group block bg-[#111] border border-white/10 rounded-xl p-6 hover:border-white hover:-translate-y-1 transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="tool-card-icon">
+                        <i class="fas fa-image text-white text-xl"></i>
+                    </div>
+                    <span class="text-xs text-tertiary border border-subtle px-2 py-1 rounded-md">
+                        Free
+                    </span>
+                </div>
+                <h3 class="tool-card-title">
+                    Thumbnail Suite
+                </h3>
+                <p class="tool-card-description">
+                    Preview thumbnails across all devices and formats. Compress images to under 2MB with smart quality
+                    optimization.
+                </p>
+                <div class="mt-6 flex items-center text-white font-bold group-hover:text-gray-300 transition-colors">
+                    Open Tool <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </div>
+            </a>
+
+            <!-- Card 5: Money Calculator -->
+            <a href="./youtube-money-calculator/index.html" target="_blank"
+                class="group block bg-[#111] border border-white/10 rounded-xl p-6 hover:border-white hover:-translate-y-1 transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="tool-card-icon">
+                        <i class="fas fa-dollar-sign text-white text-xl"></i>
+                    </div>
+                    <span class="text-xs text-tertiary border border-subtle px-2 py-1 rounded-md">
+                        Free
+                    </span>
+                </div>
+                <h3 class="tool-card-title">
+                    Money Calculator
+                </h3>
+                <p class="tool-card-description">
+                    Estimate your potential YouTube earnings based on daily views and CPM. Includes fun comparisons.
+                </p>
+                <div class="mt-6 flex items-center text-white font-bold group-hover:text-gray-300 transition-colors">
+                    Open Tool <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </div>
+            </a>
+
+            <!-- Card 6: Idea Generator -->
+            <a href="./video-idea-generator/index.html" target="_blank"
+                class="group block bg-[#111] border border-white/10 rounded-xl p-6 hover:border-white hover:-translate-y-1 transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="tool-card-icon">
+                        <i class="fas fa-lightbulb text-white text-xl"></i>
+                    </div>
+                    <span class="text-xs text-tertiary border border-subtle px-2 py-1 rounded-md">
+                        Free
+                    </span>
+                </div>
+                <h3 class="tool-card-title">
+                    Idea Generator
+                </h3>
+                <p class="tool-card-description">
+                    Stuck on what to film? Generate viral-worthy video concepts instantly with our random idea picker.
+                </p>
+                <div class="mt-6 flex items-center text-white font-bold group-hover:text-gray-300 transition-colors">
+                    Open Tool <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </div>
+            </a>
+
+            <!-- Card 7: Title Generator -->
+            <a href="./title-generator/index.html" target="_blank"
+                class="group block bg-[#111] border border-white/10 rounded-xl p-6 hover:border-white hover:-translate-y-1 transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="tool-card-icon">
+                        <i class="fas fa-heading text-white text-xl"></i>
+                    </div>
+                    <span class="text-xs text-tertiary border border-subtle px-2 py-1 rounded-md">
+                        Free
+                    </span>
+                </div>
+                <h3 class="tool-card-title">
+                    Title Generator
+                </h3>
+                <p class="tool-card-description">
+                    Generate viral YouTube titles with static templates or AI-powered suggestions. Dual-engine system
+                    for maximum creativity.
+                </p>
+                <div class="mt-6 flex items-center text-white font-bold group-hover:text-gray-300 transition-colors">
+                    Open Tool <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </div>
+            </a>
+
+            <!-- Card 8: Banner Resizer -->
+            <a href="./banner-resizer/index.html" target="_blank"
+                class="group block bg-[#111] border border-white/10 rounded-xl p-6 hover:border-white hover:-translate-y-1 transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="tool-card-icon">
+                        <i class="fas fa-panorama text-white text-xl"></i>
+                    </div>
+                    <span class="text-xs text-tertiary border border-subtle px-2 py-1 rounded-md">
+                        Free
+                    </span>
+                </div>
+                <h3 class="tool-card-title">
+                    Banner Resizer
+                </h3>
+                <p class="tool-card-description">
+                    Resize YouTube channel banners with safe zone guides for TV, desktop, and mobile. Perfect 2560x1440
+                    output.
+                </p>
+                <div class="mt-6 flex items-center text-white font-bold group-hover:text-gray-300 transition-colors">
+                    Open Tool <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </div>
+            </a>
+
+            <!-- Card 9: Caption Formatter -->
+            <a href="./caption-formatter/index.html" target="_blank"
+                class="group block bg-[#111] border border-white/10 rounded-xl p-6 hover:border-white hover:-translate-y-1 transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="tool-card-icon">
+                        <i class="fas fa-closed-captioning text-white text-xl"></i>
+                    </div>
+                    <span class="text-xs text-tertiary border border-subtle px-2 py-1 rounded-md">
+                        Free
+                    </span>
+                </div>
+                <h3 class="tool-card-title">
+                    Caption Formatter
+                </h3>
+                <p class="tool-card-description">
+                    Auto-format captions for TikTok and YouTube. Generate SRT, VTT, or plain text with automatic
+                    timestamps.
+                </p>
+                <div class="mt-6 flex items-center text-white font-bold group-hover:text-gray-300 transition-colors">
+                    Open Tool <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </div>
+            </a>
+
+            <!-- Card 10: Chapter Stamp -->
+            <a href="./chapter-stamp/index.html" target="_blank"
+                class="group block bg-[#111] border border-white/10 rounded-xl p-6 hover:border-white hover:-translate-y-1 transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="tool-card-icon">
+                        <i class="fas fa-list-ol text-white text-xl"></i>
+                    </div>
+                    <span class="text-xs text-tertiary border border-subtle px-2 py-1 rounded-md">
+                        Free
+                    </span>
+                </div>
+                <h3 class="tool-card-title">
+                    Chapter Stamp
+                </h3>
+                <p class="tool-card-description">
+                    Convert messy timestamps into clean YouTube chapter markers. Supports multiple input formats.
+                </p>
+                <div class="mt-6 flex items-center text-white font-bold group-hover:text-gray-300 transition-colors">
+                    Open Tool <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </div>
+            </a>
 
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 border-t border-gray-700 py-8 mt-auto">
-        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
-            <p>&copy; 2024 My Web Tools. All rights reserved.</p>
-            <p class="mt-2">
-                Built with <i class="fas fa-code text-blue-500 mx-1"></i> and <i
-                    class="fas fa-heart text-red-500 mx-1"></i>
+    <!-- Golden Footer -->
+    <footer class="border-t border-subtle py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 text-sm mb-3">
+                &copy; 2025 Creator Tools. All rights reserved.
+            </p>
+            <nav class="flex justify-center items-center space-x-4 text-sm text-gray-500 mb-4">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <span>•</span>
+                <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <span>•</span>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms</a>
+            </nav>
+            <p class="text-xs text-gray-600 italic">
+                Free Online Tools for YouTubers, Vloggers & Content Creators.
             </p>
         </div>
     </footer>

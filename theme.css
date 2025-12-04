@@ -1,0 +1,98 @@
+/* Base */
+body {
+    background-color: #000000;
+    color: #e5e5e5;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Typography */
+.glow-text {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Containers */
+.card {
+    background-color: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    /* Mobile default */
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: 2rem;
+        /* Desktop */
+    }
+}
+
+/* Inputs */
+.input-field {
+    width: 100%;
+    background-color: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 16px;
+    /* Prevents iOS zoom */
+    transition: border-color 0.2s;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #ffffff;
+}
+
+/* Buttons (The Critical Part) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    cursor: pointer;
+    min-height: 44px;
+    /* Touch target size */
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #e5e5e5;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: #222222;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: #333333;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-ghost {
+    background-color: transparent;
+    color: #9ca3af;
+    /* gray-400 */
+    border: 1px solid transparent;
+}
+
+.btn-ghost:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Utilities */
+.accent-white {
+    accent-color: white;
+}

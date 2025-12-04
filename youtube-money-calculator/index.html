@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Money Calculator - Estimate Your Earnings</title>
+    <link rel="canonical" href="https://tools-site-3a6.pages.dev/youtube-money-calculator/">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-477VRK42E1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-477VRK42E1');
+    </script>
+    <meta name="description"
+        content="Calculate your potential YouTube earnings based on daily views and CPM. See how much money you can make on YouTube. Free online calculator.">
+    <meta name="keywords"
+        content="youtube money calculator, youtube earnings calculator, youtube income calculator, cpm calculator, youtube revenue">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "YouTube Money Calculator",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <!-- Tailwind CSS (Layout Only) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Linear Theme -->
+    <link rel="stylesheet" href="../theme.css">
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="header sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <!-- Home Button -->
+                <a href="../index.html" class="btn btn-secondary">
+                    <i class="fas fa-home mr-2"></i>
+                    <span class="hidden sm:inline">Home</span>
+                </a>
+
+                <!-- App Drawer -->
+                <div class="relative group">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-th text-white mr-2"></i>
+                        <span class="hidden sm:inline">More Tools</span>
+                        <i class="fas fa-chevron-down text-xs ml-2"></i>
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div
+                        class="dropdown-menu absolute right-0 mt-2 w-64 bg-[#111] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-2">
+                            <a href="../teleprompter/index.html"
+                                class="block px-4 py-3 hover:bg-[#222] transition-colors">
+                                <i class="fas fa-scroll text-white mr-3 w-5"></i>Teleprompter
+                            </a>
+                            <a href="../youtube-tags/index.html"
+                                class="block px-4 py-3 hover:bg-[#222] transition-colors">
+                                <i class="fas fa-tags text-white mr-3 w-5"></i>Tag Genius
+                            </a>
+                            <a href="../script-timer/index.html"
+                                class="block px-4 py-3 hover:bg-[#222] transition-colors">
+                                <i class="fas fa-stopwatch text-white mr-3 w-5"></i>Script Timer
+                            </a>
+                            <a href="../thumbnail-preview/index.html"
+                                class="block px-4 py-3 hover:bg-[#222] transition-colors">
+                                <i class="fas fa-image text-white mr-3 w-5"></i>Thumbnail Suite
+                            </a>
+                            <a href="../video-idea-generator/index.html"
+                                class="block px-4 py-3 hover:bg-[#222] transition-colors">
+                                <i class="fas fa-lightbulb text-white mr-3 w-5"></i>Idea Generator
+                            </a>
+                            <div class="border-t border-white/10 my-1"></div>
+                            <a href="../index.html"
+                                class="block px-4 py-3 hover:bg-[#222] transition-colors text-sm text-gray-400">
+                                View All Tools
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+
+        <!-- Hero -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 glow-text text-white">
+                YouTube Money Calculator
+            </h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                Find out how much you can earn from your YouTube videos based on views and CPM.
+            </p>
+        </div>
+
+        <!-- Calculator Card -->
+        <div class="card max-w-4xl mx-auto mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+                <!-- Inputs -->
+                <div class="space-y-8">
+                    <!-- Daily Views -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-4 flex justify-between">
+                            <span><i class="fas fa-eye mr-2 text-white"></i>Daily Views</span>
+                            <span id="views-display" class="text-white font-bold">10,000</span>
+                        </label>
+                        <input type="range" id="views-slider" min="1000" max="1000000" step="1000" value="10000"
+                            class="w-full accent-white h-2 bg-[#333] rounded-lg appearance-none cursor-pointer">
+                        <div class="mt-4">
+                            <input type="number" id="views-input" value="10000" class="input-field text-center">
+                        </div>
+                    </div>
+
+                    <!-- CPM -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-4 flex justify-between">
+                            <span><i class="fas fa-chart-line mr-2 text-white"></i>Estimated CPM ($)</span>
+                            <span id="cpm-display" class="text-white font-bold">$2.00</span>
+                        </label>
+                        <input type="range" id="cpm-slider" min="0.5" max="20" step="0.5" value="2.00"
+                            class="w-full accent-white h-2 bg-[#333] rounded-lg appearance-none cursor-pointer">
+                        <div class="mt-4">
+                            <input type="number" id="cpm-input" value="2.00" step="0.1" class="input-field text-center">
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">
+                            *CPM = Cost Per 1,000 Views. Average is $2 - $5.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="bg-black border border-white/10 rounded-xl p-6 flex flex-col justify-center space-y-6">
+                    <h3 class="text-xl font-bold text-white mb-2 text-center">Estimated Earnings</h3>
+
+                    <!-- Daily -->
+                    <div class="flex justify-between items-center border-b border-white/10 pb-4">
+                        <span class="text-gray-400">Daily</span>
+                        <span id="daily-earnings" class="text-2xl font-bold text-white glow-text">$20.00</span>
+                    </div>
+
+                    <!-- Monthly -->
+                    <div class="flex justify-between items-center border-b border-white/10 pb-4">
+                        <span class="text-gray-400">Monthly</span>
+                        <span id="monthly-earnings" class="text-3xl font-bold text-white glow-text">$600.00</span>
+                    </div>
+
+                    <!-- Yearly -->
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-400">Yearly</span>
+                        <span id="yearly-earnings" class="text-4xl font-bold text-white glow-text">$7,300.00</span>
+                    </div>
+
+                    <!-- Fun Fact -->
+                    <div class="mt-6 pt-6 border-t border-white/10 text-center">
+                        <p class="text-sm text-gray-400 mb-2">That's equivalent to:</p>
+                        <div class="text-white font-bold text-lg flex items-center justify-center">
+                            <i class="fas fa-coffee text-white mr-2"></i>
+                            <span id="coffee-count">120</span>
+                            <span class="ml-1">Cups of Coffee / Month</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SEO Article -->
+        <article class="prose prose-invert max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-4">How YouTube Earnings Work</h2>
+            <p class="text-gray-400 mb-6">
+                YouTube earnings are primarily based on CPM (Cost Per Mille), which is the amount advertisers pay for
+                every 1,000 views of their ads on your videos. However, not every view is monetized. Factors like viewer
+                location, niche, and video length affect your actual RPM (Revenue Per Mille).
+            </p>
+
+            <h3 class="text-xl font-bold text-white mb-3">What affects your CPM?</h3>
+            <ul class="list-disc pl-5 text-gray-400 space-y-2 mb-6">
+                <li><strong>Niche:</strong> Finance and Tech channels often have higher CPMs ($10+) compared to Vlogs or
+                    Gaming ($1-$3).</li>
+                <li><strong>Geography:</strong> Views from countries like USA, UK, and Australia pay significantly more.
+                </li>
+                <li><strong>Seasonality:</strong> Ad rates typically increase in Q4 (October - December).</li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-white mb-3">How to use this calculator</h3>
+            <p class="text-gray-400">
+                Simply adjust the "Daily Views" slider to match your channel's traffic. Then, estimate your CPM based on
+                your niche. The calculator will instantly show your potential daily, monthly, and yearly revenue.
+            </p>
+        </article>
+
+    </main>
+
+    <!-- Golden Footer -->
+    <footer class="border-t border-subtle py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 text-sm mb-3">
+                &copy; 2025 Creator Tools. All rights reserved.
+            </p>
+            <nav class="flex justify-center items-center space-x-4 text-sm text-gray-500 mb-4">
+                <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+                <span>•</span>
+                <a href="../privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <span>•</span>
+                <a href="../terms.html" class="hover:text-white transition-colors">Terms</a>
+            </nav>
+            <p class="text-xs text-gray-600 italic">
+                Free Online Tools for YouTubers, Vloggers & Content Creators.
+            </p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

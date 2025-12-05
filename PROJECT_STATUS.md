@@ -198,6 +198,34 @@ npx wrangler pages deploy . --project-name=tools-site
 
 **Security Note**: Store your API token securely. Never commit tokens to version control.
 
+### 🔐 Credentials File
+
+**File Location**: `.credentials` (in project root)  
+**Status**: ✅ Local only (protected by .gitignore)
+
+**Purpose**:
+- Stores all API tokens and credentials in one secure location
+- Used by AI assistant (Google Antigravity) for automated operations
+- Enables seamless deployments and GitHub operations without manual token input
+
+**Contents**:
+- Cloudflare API Token (for deployments)
+- GitHub Personal Access Token (for repository operations)
+- Google Analytics Tracking ID
+- X/Twitter credentials (for reference only)
+
+**⚠️ CRITICAL SECURITY RULES**:
+1. **NEVER commit this file to Git** (already in .gitignore)
+2. **NEVER share this file publicly**
+3. This file is for AI assistant use only
+4. Keep backups in a secure location (password manager recommended)
+5. Rotate tokens periodically for security
+
+**For AI Assistant**:
+- Read `.credentials` file when tokens are needed for operations
+- Use credentials only for authorized tasks (deployments, git operations)
+- Never display full token values in responses
+
 ---
 
 ## 🐙 GitHub Repository
